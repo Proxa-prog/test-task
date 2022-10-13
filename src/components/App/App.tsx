@@ -1,11 +1,18 @@
-import React from 'react';
-import Header from '../Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Main from '../Main';
+
+import '../../fonts/style.css';
 import './style.scss';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+          <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<Main />} />
+            </Routes>
+          </BrowserRouter>
     </div>
   );
 }
